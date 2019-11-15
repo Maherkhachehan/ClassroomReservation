@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddReservationActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/toolbar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <TextView
+        android:id="@+id/textViewAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Reservation"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@id/add_fromTime_DateButton"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:textSize="@dimen/TextSize"/>
+
+    <Button
+        android:id="@+id/add_fromTime_DateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="FromTime Dato"
+        app:layout_constraintEnd_toStartOf="@id/add_fromTime_Timebutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAdd"
+        android:onClick="datePickButtonClicked"/>
+
+    <Button
+        android:id="@+id/add_fromTime_Timebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="FromTime Tid"
+        android:inputType="textCapWords"
+        android:timePickerMode="spinner"
+        app:layout_constraintStart_toEndOf="@id/add_fromTime_DateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewAdd"
+        android:onClick="timePickButtonClicked"/>
+
+    <Button
+        android:id="@+id/add_toTime_DateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="ToTime Dato"
+        android:inputType="textCapWords"
+        android:timePickerMode="spinner"
+        app:layout_constraintEnd_toStartOf="@id/add_toTime_Timebutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_fromTime_DateButton"
+        android:onClick="datePickButtonClickedTo"/>
+
+    <Button
+        android:id="@+id/add_toTime_Timebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="ToTime Tid"
+        android:inputType="textCapWords"
+        android:timePickerMode="spinner"
+        app:layout_constraintStart_toEndOf="@id/add_toTime_DateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_fromTime_DateButton"
+        android:onClick="timePickButtonClickedTo"/>
+
+
+    <EditText
+        android:id="@+id/add_reservation_purpose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Purpose"
+        android:inputType="textCapWords"
+        app:layout_constraintTop_toBottomOf="@+id/add_toTime_DateButton"
+        app:layout_constraintBottom_toTopOf="@+id/add_reservation_add"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/add_reservation_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="addReservation"
+        android:text="Add"
+        app:layout_constraintTop_toBottomOf="@+id/add_reservation_purpose"
+        app:layout_constraintBottom_toTopOf="@id/add_reservation_message"/>
+
+    <TextView
+        android:id="@+id/add_reservation_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/add_reservation_add"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

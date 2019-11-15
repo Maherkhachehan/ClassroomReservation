@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "531066732833",
+    "firebase_url": "https://roomreservation-8a148.firebaseio.com",
+    "project_id": "roomreservation-8a148",
+    "storage_bucket": "roomreservation-8a148.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:531066732833:android:c43cbd99de01b4032bbe60",
+        "android_client_info": {
+          "package_name": "com.example.classroomreservation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "531066732833-vq9q0kg27e6t0cfcgnipetrdt77hoil9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDac9-iPq3AGE5xf1ilQUCFKYTO8Vr_tlc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "531066732833-vq9q0kg27e6t0cfcgnipetrdt77hoil9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

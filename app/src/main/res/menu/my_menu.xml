@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/back_button"
+        android:icon="@drawable/ic_menu_back"
+        android:title="Back"
+        app:showAsAction="always|ifRoom|withText" />
+    <item
+        android:id="@+id/add_reservation"
+        android:icon="@drawable/ic_menu_rooms"
+        android:title="Add reservation"
+        app:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/rooms"
+        android:icon="@drawable/ic_menu_rooms"
+        android:title="Rooms" />
+    <item
+        android:id="@+id/log_in_page"
+        android:title="Log In Page" />
+</menu>
